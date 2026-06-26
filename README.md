@@ -41,7 +41,7 @@ The site frames every project around three questions: *What is the problem? What
 - MBA
 - Financial Modeling Certificate
 - PL-300 Power BI — In Progress
-- IIBA CCBA — Planned
+- IIBA CBAP — Planned
 
 ---
 
