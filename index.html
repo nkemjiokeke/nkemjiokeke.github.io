@@ -135,6 +135,25 @@
     border-radius: 4px; padding: 3rem;
   }
 
+  .hero-image-placeholder {
+    background: var(--dark-blue);
+    border: 2px dashed rgba(255,255,255,0.25);
+    border-radius: 4px;
+    min-height: 460px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 0.75rem; text-align: center; padding: 3rem;
+  }
+
+  .hero-image-placeholder .placeholder-title {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: rgba(255,255,255,0.55);
+  }
+
+  .hero-image-placeholder .placeholder-sub {
+    font-size: 0.7rem; color: rgba(255,255,255,0.3); font-weight: 300;
+    max-width: 260px;
+  }
+
   .panel-label {
     font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em;
     text-transform: uppercase; color: rgba(255,255,255,0.35);
@@ -374,51 +393,40 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">Jude <em>Okeke</em></div>
+  <div class="nav-logo">Nkemjika Jude <em>Okeke</em></div>
   <div class="nav-links">
     <a href="#projects">Work</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
-    <a href="https://github.com/Marlonagrovat" target="_blank" class="nav-cta">GitHub</a>
+    <a href="https://github.com/nkemjiokeke" target="_blank" class="nav-cta">GitHub</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
   <div>
-    <div class="hero-tag">Data &amp; Business Analyst</div>
-    <h1>Turn<br>data<br>into <span class="accent">decisions</span></h1>
-    <p class="hero-body">I build analyses that give decision-makers something they can act on — not just look at. Every project answers three questions: what is the problem, what does the data reveal, and what should the business do next.</p>
+    <div class="hero-tag">Business Intelligence Analyst</div>
+    <h1>I turn<br>Business data<br>into <span class="accent">insightful decisions</span></h1>
+    <p class="hero-body">Every data undergoes the OIA framework: Observe. Interrogate. Analyse. In my analysis, I put myself directly in the shoes of the stakeholder and ask the questions: What is this problem? (Observe) — What is the future state if unresolved? How can it be resolved? What is the future like if this is resolved, and what can the business do next?</p>
     <div class="hero-actions">
       <a href="#projects" class="btn-primary">View Projects</a>
-      <a href="https://github.com/Marlonagrovat" target="_blank" class="btn-outline">
+      <a href="https://github.com/nkemjiokeke" target="_blank" class="btn-outline">
         GitHub
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
       </a>
     </div>
   </div>
 
-  <div class="hero-panel">
-    <div class="panel-label">Portfolio at a Glance</div>
-    <div class="stat-grid">
-      <div class="stat"><div class="stat-num">20</div><div class="stat-label">Projects planned</div></div>
-      <div class="stat"><div class="stat-num">10</div><div class="stat-label">Sectors covered</div></div>
-      <div class="stat"><div class="stat-num">6</div><div class="stat-label">Tools showcased</div></div>
-      <div class="stat"><div class="stat-num">4</div><div class="stat-label">Build phases</div></div>
-    </div>
-    <div class="phase-strip">
-      <div class="phase-micro">Build Progress</div>
-      <div class="phase-row"><span class="phase-lbl">Phase 1</span><div class="phase-bar"><div class="phase-fill" style="width:0%"></div></div><span class="phase-count">6</span></div>
-      <div class="phase-row"><span class="phase-lbl">Phase 2</span><div class="phase-bar"><div class="phase-fill" style="width:0%"></div></div><span class="phase-count">6</span></div>
-      <div class="phase-row"><span class="phase-lbl">Phase 3</span><div class="phase-bar"><div class="phase-fill" style="width:0%"></div></div><span class="phase-count">6</span></div>
-      <div class="phase-row"><span class="phase-lbl">Phase 4</span><div class="phase-bar"><div class="phase-fill" style="width:0%"></div></div><span class="phase-count">2</span></div>
-    </div>
+  <!-- TODO: replace with chosen profile/hero image -->
+  <div class="hero-image-placeholder">
+    <div class="placeholder-title">Image Placeholder</div>
+    <div class="placeholder-sub">Add hero image here</div>
   </div>
 </div>
 
 <!-- PROJECTS -->
 <section class="section" id="projects">
-  <div class="sec-label">Selected Work</div>
+  <div class="sec-label">Portfolio at a Glance</div>
   <div class="sec-title">20 Projects &nbsp;·&nbsp; 10 Sectors</div>
 
   <div class="filter-bar" id="filterBar">
@@ -489,7 +497,7 @@
   <div class="contact-links">
     <a href="turbodata.td@gmail.com" class="cl cl-primary">Send an Email</a>
     <a href="https://linkedin.com/in/nkemuzokeke" target="_blank" class="cl">LinkedIn</a>
-    <a href="https://github.com/Marlonagrovat" target="_blank" class="cl">GitHub</a>
+    <a href="https://github.com/nkemjiokeke" target="_blank" class="cl">GitHub</a>
   </div>
 </div>
 
@@ -497,26 +505,26 @@
 
 <script>
 const projects = [
-  { id:"01", title:"Crop Yield vs. Input Cost Efficiency", body:"Identifying which farm inputs actually move the yield needle — and which ones are costing money for nothing.", sector:"Agriculture", tools:["SQL","Excel"], phase:"Phase 2", status:"soon", url:"https://github.com/Marlonagrovat/01-crop-yield-input-cost" },
-  { id:"02", title:"Post-Harvest Loss Mapping", body:"Mapping where Nigeria's tomato disappears between the farm and the market — and what it costs.", sector:"Agriculture", tools:["SQL","Tableau"], phase:"Phase 2", status:"soon", url:"https://github.com/Marlonagrovat/02-post-harvest-loss-mapping" },
-  { id:"03", title:"Branch Efficiency Benchmarking", body:"Benchmarking 28 bank branches to find who is earning their cost base — and who isn't.", sector:"Banking", tools:["SQL","Power BI"], phase:"Phase 1", status:"progress", url:"https://github.com/Marlonagrovat/03-branch-efficiency-benchmarking" },
-  { id:"04", title:"SME Loan Portfolio Health Dashboard", body:"An early warning system for a 1,200-loan SME portfolio — catching credit stress before it becomes default.", sector:"Banking", tools:["SQL","Power BI"], phase:"Phase 1", status:"progress", url:"https://github.com/Marlonagrovat/04-sme-loan-portfolio-health" },
-  { id:"05", title:"Microfinance Borrower Segmentation", body:"Segmenting 8,000 microfinance borrowers to find who is worth retaining — and who the institution has been treating the same by mistake.", sector:"Banking", tools:["SQL","Tableau"], phase:"Phase 2", status:"soon", url:"https://github.com/Marlonagrovat/05-microfinance-borrower-segmentation" },
-  { id:"06", title:"OEE Dashboard — Auto Parts Plant", body:"Turning six months of production log data into a single number that tells a plant manager exactly where their capacity is going.", sector:"Manufacturing", tools:["Power BI","Excel"], phase:"Phase 1", status:"progress", url:"https://github.com/Marlonagrovat/06-oee-auto-parts-plant" },
-  { id:"07", title:"Defect Root Cause Analysis", body:"Finding why Line 3's reject rate is double the factory average — with data, not guesswork.", sector:"Manufacturing", tools:["SQL","Excel"], phase:"Phase 2", status:"soon", url:"https://github.com/Marlonagrovat/07-defect-root-cause-analysis" },
-  { id:"08", title:"Last-Mile Delivery Performance", body:"Diagnosing why a regional courier's on-time rate is 19 points below target — and which eight routes are the real problem.", sector:"Supply Chain", tools:["SQL","Tableau"], phase:"Phase 1", status:"progress", url:"https://github.com/Marlonagrovat/08-last-mile-delivery-performance" },
-  { id:"09", title:"Supplier Scorecard", body:"A data-driven supplier scorecard that surfaces the three vendors quietly sabotaging the production schedule.", sector:"Supply Chain", tools:["Excel","Power BI"], phase:"Phase 2", status:"soon", url:"https://github.com/Marlonagrovat/09-supplier-scorecard" },
-  { id:"10", title:"ER Wait Time Bottleneck Analysis", body:"Using patient flow timestamps to find the real ER bottleneck — and it isn't where the doctors think it is.", sector:"Healthcare", tools:["SQL","Power BI"], phase:"Phase 1", status:"progress", url:"https://github.com/Marlonagrovat/10-er-wait-time-bottleneck" },
-  { id:"11", title:"30-Day Readmission Risk", body:"Identifying which patients are most likely to return to the hospital within 30 days — before they do.", sector:"Healthcare", tools:["SQL","Tableau"], phase:"Phase 3", status:"soon", url:"https://github.com/Marlonagrovat/11-30-day-readmission-risk" },
-  { id:"12", title:"Community Clinic Inventory Optimization", body:"Building a reorder model that stops a community clinic from running out of the medications it needs most.", sector:"Healthcare", tools:["SQL","Excel"], phase:"Phase 3", status:"soon", url:"https://github.com/Marlonagrovat/12-clinic-inventory-optimization" },
-  { id:"13", title:"Revenue Leakage Audit", body:"Finding the NGN 12M leaking out of a Nigerian SME's margin — without a single new expense.", sector:"SME", tools:["SQL","Excel"], phase:"Phase 1", status:"progress", url:"https://github.com/Marlonagrovat/13-revenue-leakage-audit" },
-  { id:"14", title:"13-Week Rolling Cash Flow Dashboard", body:"A 13-week rolling cash flow dashboard that shows a small business owner their cash crisis before it happens.", sector:"SME", tools:["Excel","Looker Studio"], phase:"Phase 2", status:"soon", url:"https://github.com/Marlonagrovat/14-rolling-cash-flow-dashboard" },
-  { id:"15", title:"Customer Churn Early Warning", body:"Building a churn early warning system that tells a SaaS company which 47 clients are about to cancel — before they do.", sector:"SME", tools:["SQL","Power BI"], phase:"Phase 1", status:"progress", url:"https://github.com/Marlonagrovat/15-customer-churn-early-warning" },
-  { id:"16", title:"Employee Attrition Risk Dashboard", body:"A flight-risk scoring dashboard that tells HR which employees are about to leave — ranked by both risk and business impact.", sector:"HR", tools:["SQL","Power BI"], phase:"Phase 3", status:"soon", url:"https://github.com/Marlonagrovat/16-employee-attrition-risk" },
-  { id:"17", title:"Workforce Productivity Analysis", body:"Measuring what a professional services firm's 80 staff actually produce per hour available — and where the drag is.", sector:"HR", tools:["Excel","Tableau"], phase:"Phase 3", status:"soon", url:"https://github.com/Marlonagrovat/17-workforce-productivity-analysis" },
-  { id:"18", title:"GA4 Funnel Drop-Off Analysis", body:"Finding exactly where 82% of shoppers leave before buying — and calculating what it would be worth to stop them.", sector:"Digital", tools:["Google Analytics","Looker Studio"], phase:"Phase 3", status:"soon", url:"https://github.com/Marlonagrovat/18-ga4-funnel-dropoff" },
-  { id:"19", title:"Marketing Channel Attribution", body:"Rebuilding marketing attribution from last-click to multi-touch — and finding that email was the real hero all along.", sector:"Digital", tools:["SQL","Google Analytics"], phase:"Phase 3", status:"soon", url:"https://github.com/Marlonagrovat/19-marketing-channel-attribution" },
-  { id:"20", title:"Municipal Budget vs. Citizen Outcome", body:"Ten years of Ontario municipal budget data vs. resident outcomes — finding where the money goes and where it should.", sector:"Public Sector", tools:["SQL","Tableau"], phase:"Phase 4", status:"soon", url:"https://github.com/Marlonagrovat/20-municipal-budget-citizen-outcome" }
+  { id:"01", title:"Crop Yield vs. Input Cost Efficiency", body:"Identifying which farm inputs actually move the yield needle — and which ones are costing money for nothing.", sector:"Agriculture", tools:["SQL","Excel"], phase:"Phase 2", status:"soon", url:"https://github.com/nkemjiokeke/01-crop-yield-input-cost" },
+  { id:"02", title:"Post-Harvest Loss Mapping", body:"Mapping where Nigeria's tomato disappears between the farm and the market — and what it costs.", sector:"Agriculture", tools:["SQL","Tableau"], phase:"Phase 2", status:"soon", url:"https://github.com/nkemjiokeke/02-post-harvest-loss-mapping" },
+  { id:"03", title:"Branch Efficiency Benchmarking", body:"Benchmarking 28 bank branches to find who is earning their cost base — and who isn't.", sector:"Banking", tools:["SQL","Power BI"], phase:"Phase 1", status:"progress", url:"https://github.com/nkemjiokeke/03-branch-efficiency-benchmarking" },
+  { id:"04", title:"SME Loan Portfolio Health Dashboard", body:"An early warning system for a 1,200-loan SME portfolio — catching credit stress before it becomes default.", sector:"Banking", tools:["SQL","Power BI"], phase:"Phase 1", status:"progress", url:"https://github.com/nkemjiokeke/04-sme-loan-portfolio-health" },
+  { id:"05", title:"Microfinance Borrower Segmentation", body:"Segmenting 8,000 microfinance borrowers to find who is worth retaining — and who the institution has been treating the same by mistake.", sector:"Banking", tools:["SQL","Tableau"], phase:"Phase 2", status:"soon", url:"https://github.com/nkemjiokeke/05-microfinance-borrower-segmentation" },
+  { id:"06", title:"OEE Dashboard — Auto Parts Plant", body:"Turning six months of production log data into a single number that tells a plant manager exactly where their capacity is going.", sector:"Manufacturing", tools:["Power BI","Excel"], phase:"Phase 1", status:"progress", url:"https://github.com/nkemjiokeke/06-oee-auto-parts-plant" },
+  { id:"07", title:"Defect Root Cause Analysis", body:"Finding why Line 3's reject rate is double the factory average — with data, not guesswork.", sector:"Manufacturing", tools:["SQL","Excel"], phase:"Phase 2", status:"soon", url:"https://github.com/nkemjiokeke/07-defect-root-cause-analysis" },
+  { id:"08", title:"Last-Mile Delivery Performance", body:"Diagnosing why a regional courier's on-time rate is 19 points below target — and which eight routes are the real problem.", sector:"Supply Chain", tools:["SQL","Tableau"], phase:"Phase 1", status:"progress", url:"https://github.com/nkemjiokeke/08-last-mile-delivery-performance" },
+  { id:"09", title:"Supplier Scorecard", body:"A data-driven supplier scorecard that surfaces the three vendors quietly sabotaging the production schedule.", sector:"Supply Chain", tools:["Excel","Power BI"], phase:"Phase 2", status:"soon", url:"https://github.com/nkemjiokeke/09-supplier-scorecard" },
+  { id:"10", title:"ER Wait Time Bottleneck Analysis", body:"Using patient flow timestamps to find the real ER bottleneck — and it isn't where the doctors think it is.", sector:"Healthcare", tools:["SQL","Power BI"], phase:"Phase 1", status:"progress", url:"https://github.com/nkemjiokeke/10-er-wait-time-bottleneck" },
+  { id:"11", title:"30-Day Readmission Risk", body:"Identifying which patients are most likely to return to the hospital within 30 days — before they do.", sector:"Healthcare", tools:["SQL","Tableau"], phase:"Phase 3", status:"soon", url:"https://github.com/nkemjiokeke/11-30-day-readmission-risk" },
+  { id:"12", title:"Community Clinic Inventory Optimization", body:"Building a reorder model that stops a community clinic from running out of the medications it needs most.", sector:"Healthcare", tools:["SQL","Excel"], phase:"Phase 3", status:"soon", url:"https://github.com/nkemjiokeke/12-clinic-inventory-optimization" },
+  { id:"13", title:"Revenue Leakage Audit", body:"Finding the NGN 12M leaking out of a Nigerian SME's margin — without a single new expense.", sector:"SME", tools:["SQL","Excel"], phase:"Phase 1", status:"progress", url:"https://github.com/nkemjiokeke/13-revenue-leakage-audit" },
+  { id:"14", title:"13-Week Rolling Cash Flow Dashboard", body:"A 13-week rolling cash flow dashboard that shows a small business owner their cash crisis before it happens.", sector:"SME", tools:["Excel","Looker Studio"], phase:"Phase 2", status:"soon", url:"https://github.com/nkemjiokeke/14-rolling-cash-flow-dashboard" },
+  { id:"15", title:"Customer Churn Early Warning", body:"Building a churn early warning system that tells a SaaS company which 47 clients are about to cancel — before they do.", sector:"SME", tools:["SQL","Power BI"], phase:"Phase 1", status:"progress", url:"https://github.com/nkemjiokeke/15-customer-churn-early-warning" },
+  { id:"16", title:"Employee Attrition Risk Dashboard", body:"A flight-risk scoring dashboard that tells HR which employees are about to leave — ranked by both risk and business impact.", sector:"HR", tools:["SQL","Power BI"], phase:"Phase 3", status:"soon", url:"https://github.com/nkemjiokeke/16-employee-attrition-risk" },
+  { id:"17", title:"Workforce Productivity Analysis", body:"Measuring what a professional services firm's 80 staff actually produce per hour available — and where the drag is.", sector:"HR", tools:["Excel","Tableau"], phase:"Phase 3", status:"soon", url:"https://github.com/nkemjiokeke/17-workforce-productivity-analysis" },
+  { id:"18", title:"GA4 Funnel Drop-Off Analysis", body:"Finding exactly where 82% of shoppers leave before buying — and calculating what it would be worth to stop them.", sector:"Digital", tools:["Google Analytics","Looker Studio"], phase:"Phase 3", status:"soon", url:"https://github.com/nkemjiokeke/18-ga4-funnel-dropoff" },
+  { id:"19", title:"Marketing Channel Attribution", body:"Rebuilding marketing attribution from last-click to multi-touch — and finding that email was the real hero all along.", sector:"Digital", tools:["SQL","Google Analytics"], phase:"Phase 3", status:"soon", url:"https://github.com/nkemjiokeke/19-marketing-channel-attribution" },
+  { id:"20", title:"Municipal Budget vs. Citizen Outcome", body:"Ten years of Ontario municipal budget data vs. resident outcomes — finding where the money goes and where it should.", sector:"Public Sector", tools:["SQL","Tableau"], phase:"Phase 4", status:"soon", url:"https://github.com/nkemjiokeke/20-municipal-budget-citizen-outcome" }
 ];
 
 const sLabel = { built:"Built", progress:"In Progress", soon:"Coming Soon" };
