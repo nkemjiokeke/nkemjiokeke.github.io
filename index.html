@@ -534,23 +534,23 @@ function render(filter) {
   const g = document.getElementById('projectGrid');
   g.innerHTML = '';
   const list = filter === 'all' ? projects : projects.filter(p =>
-    p.sector.toLowerCase().includes(filter.toLowerCase()) ||
-    p.tools.some(t => t.toLowerCase().includes(filter.toLowerCase()))
+    (p.sector && p.sector.toLowerCase().includes(filter.toLowerCase())) ||
+    (p.tools && p.tools.some(t => t.toLowerCase().includes(filter.toLowerCase())))
   );
   list.forEach(p => {
     g.innerHTML += `<div class="card">
       <div class="card-top">
         <span class="card-num">Project ${p.id}</span>
-        <span class="badge ${sCls[p.status]}">${sLabel[p.status]}</span>
+        <span class="badge ${sCls[p.status] || 'b-built'}">${sLabel[p.status] || 'Built'}</span>
       </div>
       <div class="card-title">${p.title}</div>
       <div class="card-body">${p.body}</div>
       <div class="card-tags">
-        <span class="tag tag-sector">${p.sector}</span>
-        ${p.tools.map(t=>`<span class="tag tag-tool">${t}</span>`).join('')}
-        <span class="tag tag-phase">${p.phase}</span>
+        <span class="tag tag-sector">${p.sector || ''}</span>
+        ${ (p.tools || []).map(t=>`<span class="tag tag-tool">${t}</span>`).join('') }
+        <span class="tag tag-phase">${p.phase || ''}</span>
       </div>
-      <a href="${p.url}" target="_blank" class="card-link">
+      <a href="${p.url || '#'}" target="_blank" class="card-link">
         View on GitHub
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>

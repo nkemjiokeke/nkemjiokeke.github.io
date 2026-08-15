@@ -1,4 +1,4 @@
-# Jude Okeke — Data & Business Analyst Portfolio
+# Nkemjika Jude Okeke — Data & Business Analyst Portfolio
 
 **Live site:** [nkemjiokeke.github.io](https://nkemjiokeke.github.io/)  
 **GitHub:** [github.com/nkemjiokeke](https://github.com/nkemjiokeke)
@@ -55,9 +55,9 @@ The site frames every project around three questions: *What is the problem? What
 
 | Channel | Link |
 |---|---|
-| Email | turbodata.td@gmail.com |
+| Email | okekenkemjika14@gmail.com |
 | LinkedIn | [linkedin.com/in/nkemuzokeke](https://linkedin.com/in/nkemuzokeke) |
-| GitHub | [github.com/Marlonagrovat](https://github.com/Marlonagrovat) |
+| GitHub | [github.com/Marlonagrovat](https://github.com/nkemjiokeke) |
 
 ---
 
