@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nkemjika Jude Okeke — Data & Business Analyst</title>
+<meta name="description" content="Nkemjika Jude Okeke — data & business analyst. Decisions, not dashboards. Five real-Canadian-data analytics projects across energy, environment, macroeconomics, banking and public transit." />
+<style>
+  :root{
+    --deep:#0B2545;        /* dark blue */
+    --deep-2:#0A1E3C;      /* darker panel */
+    --accent:#2E6BE6;      /* blue accent */
+    --accent-soft:#4F8BFF; /* hover blue */
+    --paper:#FFFFFF;
+    --mist:#F4F7FB;        /* light section bg */
+    --line:#E2E8F2;
+    --text:#12233B;
+    --muted:#5D6E85;
+    --heading:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --body:Arial,"Helvetica Neue",Helvetica,sans-serif;
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--body);color:var(--text);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4,.h{font-family:var(--heading);font-weight:700;letter-spacing:-.01em;line-height:1.1}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(11,37,69,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{font-family:var(--heading);font-weight:700;color:#fff;font-size:18px;letter-spacing:.02em}
+  .brand span{color:var(--accent-soft)}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{color:#cdd8ea;font-size:14px;letter-spacing:.03em}
+  .nav-links a:hover{color:#fff}
+  .nav-cta{border:1px solid rgba(255,255,255,.35);padding:8px 16px;border-radius:999px;color:#fff !important;font-size:13px}
+  .nav-cta:hover{background:var(--accent);border-color:var(--accent)}
+  .nav-toggle{display:none}
+
+  /* HERO */
+  .hero{position:relative;background:linear-gradient(160deg,var(--deep) 0%,#123163 55%,#0A1E3C 100%);color:#fff;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(circle at 70% 20%,#000,transparent 70%)}
+  .hero-inner{position:relative;padding:96px 0 104px}
+  .eyebrow{display:inline-block;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-soft);border:1px solid rgba(79,139,255,.4);padding:6px 14px;border-radius:999px;margin-bottom:26px}
+  .hero h1{font-size:clamp(40px,6.4vw,74px);color:#fff;max-width:14ch}
+  .hero h1 em{font-style:normal;color:var(--accent-soft)}
+  .hero p.lede{margin-top:24px;font-size:clamp(17px,2vw,20px);color:#c7d3e6;max-width:60ch}
+  .hero-actions{margin-top:38px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:10px;font-family:var(--heading);font-weight:700;font-size:15px;letter-spacing:.02em;transition:.18s}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:var(--accent-soft);transform:translateY(-1px)}
+  .btn-ghost{border:1px solid rgba(255,255,255,.32);color:#fff}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+
+  /* STATS */
+  .stats{background:var(--deep-2);color:#fff;border-top:1px solid rgba(255,255,255,.07)}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .stat{padding:34px 20px;text-align:center;border-right:1px solid rgba(255,255,255,.08)}
+  .stat:last-child{border-right:none}
+  .stat .num{font-family:var(--heading);font-weight:700;font-size:40px;color:#fff}
+  .stat .lbl{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:#93a4bf;margin-top:6px}
+
+  /* SECTIONS */
+  section{padding:88px 0}
+  .sec-head{max-width:70ch;margin-bottom:40px}
+  .sec-kick{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-family:var(--heading);font-weight:700}
+  .sec-head h2{font-size:clamp(28px,3.6vw,40px);margin-top:12px}
+  .sec-head p{color:var(--muted);margin-top:14px;font-size:17px}
+
+  /* FILTERS */
+  .filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px}
+  .filters.tools{margin-bottom:34px}
+  .chip{border:1px solid var(--line);background:#fff;color:var(--muted);padding:8px 16px;border-radius:999px;font-size:13.5px;cursor:pointer;transition:.15s;font-family:var(--heading);font-weight:700;letter-spacing:.01em}
+  .chip:hover{border-color:var(--accent);color:var(--accent)}
+  .chip.active{background:var(--deep);border-color:var(--deep);color:#fff}
+  .chip.tool.active{background:var(--accent);border-color:var(--accent)}
+  .filter-lead{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 6px 8px 2px;width:100%}
+
+  /* GRID */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:0 0 22px;display:flex;flex-direction:column;transition:.2s;overflow:hidden}
+  .card::before{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:linear-gradient(90deg,var(--accent),var(--accent-soft));opacity:0;transition:.2s;z-index:2}
+  .card:hover{border-color:#c4d3ea;box-shadow:0 18px 40px -22px rgba(11,37,69,.4);transform:translateY(-3px)}
+  .card:hover::before{opacity:1}
+  .card-media{position:relative;width:100%;aspect-ratio:16/10;overflow:hidden;background:var(--mist)}
+  .card-media.media-fallback{background:linear-gradient(135deg,var(--deep),var(--accent))}
+  .card-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;opacity:0;transition:opacity .7s ease}
+  .card-media img.active{opacity:1}
+  .card-media .dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:2}
+  .card-media .dots span{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.6);box-shadow:0 0 0 1px rgba(11,37,69,.15);transition:.25s}
+  .card-media .dots span.active{background:#fff;width:16px;border-radius:3px}
+  .card-body{padding:20px 24px 0;display:flex;flex-direction:column;flex:1}
+  .card .idx{font-family:var(--heading);font-weight:700;font-size:13px;color:var(--accent);letter-spacing:.08em}
+  .card .method{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);float:right;margin-top:2px}
+  .card h3{font-size:20px;margin:14px 0 10px;color:var(--text)}
+  .card p{color:var(--muted);font-size:14.5px;flex:1}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+  .tag{font-size:11.5px;background:var(--mist);border:1px solid var(--line);color:#3f5069;padding:4px 10px;border-radius:6px;letter-spacing:.02em}
+  .tag.sector{background:#eaf1fe;border-color:#d5e3fc;color:var(--accent)}
+  .card .go{margin-top:20px;font-family:var(--heading);font-weight:700;font-size:14px;color:var(--deep);display:inline-flex;align-items:center;gap:7px}
+  .card:hover .go{color:var(--accent)}
+  .card .go svg{transition:.2s}
+  .card:hover .go svg{transform:translateX(4px)}
+  .empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px;border:1px dashed var(--line);border-radius:14px}
+
+  /* ABOUT */
+  .about{background:var(--mist)}
+  .about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
+  .about-grid p{color:#33455e;font-size:16.5px;margin-bottom:16px}
+  .panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px}
+  .panel h4{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  .panel .row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+  .panel .row:last-child{margin-bottom:0}
+  .pill{background:var(--mist);border:1px solid var(--line);padding:6px 12px;border-radius:8px;font-size:13px;color:#33455e}
+
+  /* CONTACT */
+  .contact{background:linear-gradient(160deg,var(--deep),#0A1E3C);color:#fff;text-align:center}
+  .contact h2{font-size:clamp(28px,4vw,44px);color:#fff}
+  .contact p{color:#c7d3e6;max-width:52ch;margin:16px auto 30px;font-size:17px}
+  .contact .btn-primary{background:#fff;color:var(--deep)}
+  .contact .btn-primary:hover{background:var(--accent);color:#fff}
+  .contact .links{margin-top:26px;display:flex;gap:26px;justify-content:center;flex-wrap:wrap}
+  .contact .links a{color:#9fb3d1;font-size:14px;letter-spacing:.03em}
+  .contact .links a:hover{color:#fff}
+
+  footer{background:#08182e;color:#7c8ba4;text-align:center;padding:30px 24px;font-size:13px}
+
+  @media(max-width:860px){
+    .grid{grid-template-columns:1fr 1fr}
+    .stats-grid{grid-template-columns:1fr 1fr}
+    .stat:nth-child(2){border-right:none}
+    .about-grid{grid-template-columns:1fr;gap:28px}
+    .nav-links{display:none}
+  }
+  @media(max-width:560px){
+    .grid{grid-template-columns:1fr}
+    section{padding:64px 0}
+    .hero-inner{padding:72px 0 78px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">Nkemjika <span>Okeke</span></a>
+    <nav class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="https://github.com/nkemjiokeke" class="nav-cta" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Data &amp; Business Analyst</span>
+    <h1>Decisions, <em>not</em> dashboards.</h1>
+    <p class="lede">I turn operational data from heavy industry and development economics into decisions leaders can act on. Every project answers three questions: what is the problem, what does the data reveal, and what should the business do next.</p>
+    <div class="hero-actions">
+      <a href="#work" class="btn btn-primary">View the work</a>
+      <a href="https://github.com/nkemjiokeke" class="btn btn-ghost" target="_blank" rel="noopener">GitHub profile</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat"><div class="num">5</div><div class="lbl">Data-driven projects</div></div>
+      <div class="stat"><div class="num">5</div><div class="lbl">Industries</div></div>
+      <div class="stat"><div class="num">6</div><div class="lbl">Tools in the stack</div></div>
+      <div class="stat"><div class="num">5</div><div class="lbl">Analytical methods</div></div>
+    </div>
+  </div>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kick">Selected Work</div>
+      <h2>Five problems worth solving</h2>
+      <p>A refinery turnaround, a national recycling rate, a provincial store plan, a bank's loan book, and a transit system's lost minutes — each project is framed as a real decision, grounded in real (or clearly labelled illustrative) data, and taken all the way to a recommendation.</p>
+    </div>
+
+    <div class="filters sectors" id="sectorFilters">
+      <span class="filter-lead">Filter by sector</span>
+    </div>
+    <div class="filters tools" id="toolFilters">
+      <span class="filter-lead">Filter by tool</span>
+    </div>
+
+    <div class="grid" id="projectGrid"></div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kick">About</div>
+      <h2>Systems thinking, across sectors</h2>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p>I work across industries because business problems don't respect industry boundaries — and neither does good analysis. My approach is grounded in systems thinking: find the real constraint, quantify it precisely, and give decision-makers a clear path forward.</p>
+        <p>My focus is on sectors where analysis carries real operational and financial weight — energy and petrochemicals, utilities, freight and logistics, insurance, development finance, and public health — with a particular edge in the industrial corridor of Sarnia–Lambton, Ontario and the markets of West Africa.</p>
+        <p>Based in Sarnia, Ontario. Open to remote data and business analyst roles globally.</p>
+      </div>
+      <div class="panel">
+        <h4>Tools &amp; Stack</h4>
+        <div class="row">
+          <span class="pill">SQL</span><span class="pill">Python</span><span class="pill">Excel &amp; Power Query</span>
+          <span class="pill">Power BI</span><span class="pill">Flourish</span><span class="pill">Datawrapper</span>
+        </div>
+        <h4>Methods</h4>
+        <div class="row">
+          <span class="pill">Cost-variance decomposition</span><span class="pill">Benchmarking &amp; geospatial</span>
+          <span class="pill">Hypothesis testing</span><span class="pill">Credit-risk scoring</span><span class="pill">Delay decomposition</span>
+        </div>
+        <h4>Sectors</h4>
+        <div class="row">
+          <span class="pill">Energy &amp; Petrochemicals</span><span class="pill">Environment &amp; Public Policy</span>
+          <span class="pill">Macroeconomics &amp; Retail</span><span class="pill">Banking &amp; Financial Services</span><span class="pill">Public Transit</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Let's work together</h2>
+    <p>Open to remote data analyst and business analyst roles globally. If you have a problem worth quantifying, I'd like to hear about it.</p>
+    <a href="mailto:okekenkemjika14@gmail.com" class="btn btn-primary">Send an email</a>
+    <div class="links">
+      <a href="mailto:okekenkemjika14@gmail.com">okekenkemjika14@gmail.com</a>
+      <a href="https://linkedin.com/in/nkemuzokeke" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/nkemjiokeke" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © <span id="yr"></span> Nkemjika Jude Okeke · Real problems. Real analysis.
+</footer>
+
+<script>
+const GH = "https://github.com/nkemjiokeke";
+const projects = [
+  {id:"01",title:"Refinery Turnaround Overrun Analysis",sector:"Energy & Petrochemicals",method:"Cost-variance decomposition",tools:["SQL","Python","Flourish"],slug:"refinery-turnaround-overrun",blurb:"A refinery ran 31% over budget across four turnarounds. Decomposing $4.5M of overrun by contractor, work category and critical path finds two causes behind about 80% of the loss — and a credible path to recover roughly a third of it.",images:["images/01-1.png","images/01-2.png","images/01-3.png"]},
+  {id:"02",title:"Recycling in Canada: the 9% Problem",sector:"Environment & Public Policy",method:"Benchmarking & geospatial",tools:["SQL","Excel","Datawrapper"],slug:"plastic-recycling-canada",blurb:"Real StatCan and ECCC data shows Canada's plastic diversion has been essentially flat since 2018 and is on track to miss its 2030 target, with 79% of what does get diverted concentrated in three provinces.",images:["images/02-1.png","images/02-2.png","images/02-3.png"]},
+  {id:"03",title:"Does Immigration Move Canada's Economy?",sector:"Macroeconomics & Retail",method:"Hypothesis test & exposure scoring",tools:["SQL","Python","Datawrapper"],slug:"population-retail-supplychain",blurb:"Real StatCan and IRCC data shows provincial GDP growth tracked population, not output per person — turned into a grow/hold/pull-back store plan by province as immigration slows.",images:["images/03-1.png","images/03-2.png","images/03-3.png"]},
+  {id:"04",title:"SME Loan Portfolio Health: an Early-Warning System",sector:"Banking & Financial Services",method:"Credit-risk scoring",tools:["SQL","Power BI","Datawrapper"],slug:"sme-loan-portfolio-health",blurb:"An early-warning score built only from what's known at origination — collateral, rate, sector, officer — separates defaulted from performing loans and flags $3.9M of expected loss while it's still recoverable.",images:["images/04-1.png","images/04-2.png","images/04-3.png"]},
+  {id:"05",title:"TTC Transit Reliability: Where Toronto's Subway Loses Its Minutes",sector:"Public Transit & Operations",method:"Delay decomposition",tools:["SQL","Power BI"],slug:"ttc-transit-reliability",blurb:"Across roughly 24,500 real subway delays, 63% of lost minutes are people-related and only 8% mechanical — a systemic problem spread across the network rather than concentrated in stations or rush hours.",images:["images/05-1.png","images/05-2.png","images/05-3.png"]}
+];
+
+const sectors = ["All", ...Array.from(new Set(projects.map(p=>p.sector)))];
+const tools = ["All","SQL","Python","Excel","Power BI","Flourish","Datawrapper"];
+let activeSector="All", activeTool="All";
+
+const arrow = '<svg width="15" height="12" viewBox="0 0 15 12" fill="none"><path d="M9 1l5 5-5 5M14 6H1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+function buildFilters(){
+  const sf=document.getElementById("sectorFilters");
+  sectors.forEach(s=>{
+    const b=document.createElement("button");
+    b.className="chip"+(s==="All"?" active":"");
+    b.textContent=s; b.onclick=()=>{activeSector=s;syncActive("sector");render();};
+    b.dataset.sector=s; sf.appendChild(b);
+  });
+  const tf=document.getElementById("toolFilters");
+  tools.forEach(t=>{
+    const b=document.createElement("button");
+    b.className="chip tool"+(t==="All"?" active":"");
+    b.textContent=t; b.onclick=()=>{activeTool=t;syncActive("tool");render();};
+    b.dataset.tool=t; tf.appendChild(b);
+  });
+}
+function syncActive(kind){
+  if(kind==="sector"){document.querySelectorAll('#sectorFilters .chip').forEach(c=>c.classList.toggle("active",c.dataset.sector===activeSector));}
+  else{document.querySelectorAll('#toolFilters .chip').forEach(c=>c.classList.toggle("active",c.dataset.tool===activeTool));}
+}
+let carouselTimers=[];
+function render(){
+  const grid=document.getElementById("projectGrid");
+  const list=projects.filter(p=>(activeSector==="All"||p.sector===activeSector)&&(activeTool==="All"||p.tools.includes(activeTool)));
+  carouselTimers.forEach(t=>clearInterval(t)); carouselTimers=[];
+  grid.innerHTML="";
+  if(!list.length){grid.innerHTML='<div class="empty">No projects match that combination yet.</div>';return;}
+  list.forEach(p=>{
+    const a=document.createElement("a");
+    a.className="card"; a.href=GH+"/"+p.slug; a.target="_blank"; a.rel="noopener";
+    const imgs=(p.images||[]);
+    const media=imgs.length?`
+      <div class="card-media">
+        ${imgs.map((src,i)=>`<img src="${src}" loading="lazy" alt="${p.title} — visualization ${i+1}" class="${i===0?'active':''}" onerror="this.closest('.card-media').classList.add('media-fallback');this.remove();">`).join("")}
+        ${imgs.length>1?`<div class="dots">${imgs.map((_,i)=>`<span class="${i===0?'active':''}"></span>`).join("")}</div>`:""}
+      </div>` : "";
+    a.innerHTML=`${media}
+      <div class="card-body">
+        <div><span class="idx">PROJECT ${p.id}</span><span class="method">${p.method}</span></div>
+        <h3>${p.title}</h3>
+        <p>${p.blurb}</p>
+        <div class="tags">
+          <span class="tag sector">${p.sector}</span>
+          ${p.tools.map(t=>`<span class="tag">${t}</span>`).join("")}
+        </div>
+        <span class="go">View project ${arrow}</span>
+      </div>`;
+    grid.appendChild(a);
+    if(imgs.length>1){
+      const imgEls=a.querySelectorAll(".card-media img");
+      const dotEls=a.querySelectorAll(".card-media .dots span");
+      let idx=0;
+      const timer=setInterval(()=>{
+        idx=(idx+1)%imgEls.length;
+        imgEls.forEach((el,i)=>el.classList.toggle("active",i===idx));
+        dotEls.forEach((el,i)=>el.classList.toggle("active",i===idx));
+      },3800);
+      carouselTimers.push(timer);
+    }
+  });
+}
+document.getElementById("yr").textContent=new Date().getFullYear();
+buildFilters(); render();
+</script>
+</body>
+</html>
